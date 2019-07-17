@@ -132,6 +132,7 @@ table {
 }
 html,
 body {
+  font-size: 62.5%;
   height: 100%;
   width: 100%;
 }
@@ -168,6 +169,12 @@ header section.nav a {
   display: flex;
   flex-wrap: wrap;
 }
+@media only screen and (max-width: 767px) {
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
 .content div.introduction {
   display: flex;
   justify-content: space-between;
@@ -175,11 +182,11 @@ header section.nav a {
   margin-top: 5px;
   margin-bottom: 5px;
 }
-.content div.introduction .pic {
+.content div.introduction div.pic {
   width: 45%;
   display: flex;
-  justify-content: cetner;
-  align-content: cetner;
+  justify-content: center;
+  align-content: center;
 }
 .content div.introduction .words {
   display: flex;
@@ -188,9 +195,8 @@ header section.nav a {
   align-content: center;
   width: 48%;
   margin-right: 2%;
-  border: 1px solid red;
 }
-.content div.introduction .words h2 {
+.content h2 {
   border: 1px solid #050505;
   margin: 0 auto;
   width: 100%;
@@ -198,8 +204,8 @@ header section.nav a {
   justify-content: center;
   background: #a78686;
 }
-.content div.introduction .words .introtitle,
-.content div.introduction .words .commentary {
+.content .introtitle,
+.content .commentary {
   width: 100%;
   display: flex;
   align-self: center;
@@ -209,9 +215,15 @@ header section.nav a {
   display: flex;
   flex-direction: column;
   width: 50%;
-  border: 1px solid red;
+}
+@media (max-width: 900px) {
+  .content .box {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 .content .box h2 {
+  font-style: 'lora', serif;
   border: 1px solid #050505;
   margin: 0 auto;
   width: 100%;
@@ -222,4 +234,8 @@ header section.nav a {
 ul,
 ol {
   margin: 0 15%;
+}
+.licenseLink {
+  box-sizing: border-box;
+  margin: 2% 0% 2% 2%;
 }

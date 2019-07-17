@@ -54,6 +54,7 @@ table {
 }
 
 html, body {
+	font-size: 62.5%;
 	height: 100%;
 	width: 100%;
 }
@@ -101,6 +102,11 @@ header {
 	background: lightgray;
 	display: flex;
 	flex-wrap: wrap;
+	
+	@media only screen and (max-width:767px){
+			display:flex;
+			flex-wrap: wrap;
+		}
 
 	div.introduction {
 		display:flex;
@@ -109,11 +115,14 @@ header {
 		margin-top: 5px;
 		margin-bottom: 5px;
 
-		.pic {
+		
+
+		div.pic {
 			width: 45%;
 			display: flex;
-			justify-content: cetner;
-			align-content: cetner;
+			justify-content: center;
+			align-content: center;
+			
 			
 		}
 		.words {
@@ -122,37 +131,40 @@ header {
 			justify-content: center;
 			align-content: center;
 			width: 48%;
-			margin-right: 2%;
+			margin-right: 2%;			
+
 			
-
-			h2 {
-				.bordered();
-			width: 100%;
-			display: flex;
-			justify-content: center;
-			background: rgb(167, 134, 134);
-
-			}
-			
-
-			.introtitle, .commentary {
-				width: 100%;
-				display: flex;
-				align-self: center;
-				justify-self: center;
-			}
 		}
 		
 	}
 
+	h2 {
+		.bordered();
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	background: rgb(167, 134, 134);
+	}
+
+	.introtitle, .commentary {
+		width: 100%;
+		display: flex;
+		align-self: center;
+		justify-self: center;
+	}
 	.box {
 		display:flex;
 		flex-direction: column;
 		width: 50%;
 		
+		
+		@media (max-width: 900px){
+			display: flex;
+			flex-wrap: wrap;
+		}
 
 		h2 {
-			font-style: @secondFont();
+			font-style: @secondFont;
 			.bordered();
 			width: 100%;
 			display: flex;
