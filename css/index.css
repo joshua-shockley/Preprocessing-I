@@ -1,1 +1,225 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1.5;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+.bordered {
+  border: 1px solid #050505;
+  margin: 0 auto;
+}
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  box-sizing: border-box;
+  background: grey;
+}
+header section.nav {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+}
+header section.nav a {
+  border: 1px solid #050505;
+  margin: 0 auto;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  width: 90px;
+  font-style: 'lora', serif;
+  Color: #2e2b2b;
+  background: #a78686;
+}
+.content {
+  background: lightgray;
+  display: flex;
+  flex-wrap: wrap;
+}
+.content div.introduction {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.content div.introduction .pic {
+  width: 45%;
+  display: flex;
+  justify-content: cetner;
+  align-content: cetner;
+}
+.content div.introduction .words {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  width: 48%;
+  margin-right: 2%;
+  border: 1px solid red;
+}
+.content div.introduction .words h2 {
+  border: 1px solid #050505;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: #a78686;
+}
+.content div.introduction .words .introtitle,
+.content div.introduction .words .commentary {
+  width: 100%;
+  display: flex;
+  align-self: center;
+  justify-self: center;
+}
+.content .box {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  border: 1px solid red;
+}
+.content .box h2 {
+  border: 1px solid #050505;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: #a78686;
+}
+ul,
+ol {
+  margin: 0 15%;
+}
