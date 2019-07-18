@@ -1,1 +1,328 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1.5;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  font-size: 62.5%;
+  height: 100%;
+  width: 100%;
+}
+.bordered {
+  border: 1px solid #050505;
+  margin: 0 auto;
+}
+header {
+  border: 1px solid #050505;
+  margin: 0 auto;
+  position: fixed;
+  height: 8%vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  box-sizing: border-box;
+  background: grey;
+}
+@media (max-width: 800px) {
+  header {
+    justify-content: space-evenly;
+  }
+}
+header h1 {
+  width: 20%;
+  align-self: center;
+  justify-content: center;
+}
+header section.nav {
+  width: 60%;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 1.5rem;
+  padding: 5px;
+}
+header section.nav a {
+  border: 1px solid #050505;
+  margin: 0 auto;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  width: 90px;
+  font-style: 'lora', serif;
+  Color: #2e2b2b;
+  margin: 0px 2px 0 2px;
+  background: #a78686;
+}
+.nav a:hover {
+  background: black;
+  color: silver;
+}
+.bottomsection {
+  width: 100%;
+  display: flex;
+}
+@media (max-width: 800px) {
+  .bottomsection {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+  }
+}
+.bottomsection div.box.skills,
+.bottomsection div.box.workHistory {
+  border: 1px solid #050505;
+  margin: 0 auto;
+  width: 48%;
+  font-size: 1.8rem;
+}
+@media (max-width: 800px) {
+  .bottomsection div.box.skills,
+  .bottomsection div.box.workHistory {
+    width: 100%;
+  }
+}
+img {
+  width: 100%;
+}
+.content {
+  font-size: 1.2rem;
+  background: lightgray;
+  display: flex;
+  flex-wrap: wrap;
+}
+.content div.introduction {
+  border: 1px solid #050505;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 5% 0  1% 0;
+}
+@media (max-width: 800px) {
+  .content div.introduction {
+    display: block;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+.content div.pic,
+.content div.words {
+  width: 49%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-size: 1.6rem;
+}
+@media (max-width: 800px) {
+  .content div.pic,
+  .content div.words {
+    width: 100%;
+  }
+}
+.content h2 {
+  border: 1px solid #050505;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: #a78686;
+  font-size: 2rem;
+}
+.content .introtitle,
+.content .commentary {
+  width: 100%;
+  display: flex;
+  align-self: center;
+  justify-self: center;
+}
+.content .commentary {
+  flex-direction: column;
+}
+.content .box {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.content .box h2 {
+  font-style: 'lora', serif;
+  border: 1px solid #050505;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: #a78686;
+}
+.content ul,
+.content ol {
+  margin: 0 15%;
+}
+.content ul li,
+.content ol li {
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 600px) {
+  .content ul li,
+  .content ol li {
+    border-bottom: 1px solid grey;
+  }
+}
+.footer {
+  width: 100%;
+  background: black;
+  color: white;
+  box-sizing: border-box;
+  margin-left: 9px;
+}
+@media (max-width: 800px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    width: 100%;
+  }
+}
+.footer h3 {
+  font-size: 1.1rem;
+}
+.footer input {
+  width: 45%;
+  margin: 3px;
+}
+.licenseLink {
+  box-sizing: border-box;
+  margin: 2% 0% 2% 2%;
+  align-self: center;
+}
+.licenseLink a {
+  text-decoration: none;
+  color: bisque;
+}
