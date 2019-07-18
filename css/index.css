@@ -141,6 +141,10 @@ body {
   margin: 0 auto;
 }
 header {
+  border: 1px solid #050505;
+  margin: 0 auto;
+  position: fixed;
+  height: 8%vh;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -148,10 +152,22 @@ header {
   box-sizing: border-box;
   background: grey;
 }
-header section.nav {
-  width: 45%;
-  display: flex;
+@media (max-width: 800px) {
+  header {
+    justify-content: space-evenly;
+  }
+}
+header h1 {
+  width: 20%;
+  align-self: center;
   justify-content: center;
+}
+header section.nav {
+  width: 60%;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 1.5rem;
+  padding: 5px;
 }
 header section.nav a {
   border: 1px solid #050505;
@@ -162,39 +178,74 @@ header section.nav a {
   width: 90px;
   font-style: 'lora', serif;
   Color: #2e2b2b;
+  margin: 0px 2px 0 2px;
   background: #a78686;
 }
+.nav a:hover {
+  background: black;
+  color: silver;
+}
+.bottomsection {
+  width: 100%;
+  display: flex;
+}
+@media (max-width: 800px) {
+  .bottomsection {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+  }
+}
+.bottomsection div.box.skills,
+.bottomsection div.box.workHistory {
+  border: 1px solid #050505;
+  margin: 0 auto;
+  width: 48%;
+  font-size: 1.8rem;
+}
+@media (max-width: 800px) {
+  .bottomsection div.box.skills,
+  .bottomsection div.box.workHistory {
+    width: 100%;
+  }
+}
+img {
+  width: 100%;
+}
 .content {
+  font-size: 1.2rem;
   background: lightgray;
   display: flex;
   flex-wrap: wrap;
 }
-@media only screen and (max-width: 767px) {
-  .content {
-    display: flex;
-    flex-wrap: wrap;
+.content div.introduction {
+  border: 1px solid #050505;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 5% 0  1% 0;
+}
+@media (max-width: 800px) {
+  .content div.introduction {
+    display: block;
+    flex-direction: column;
+    width: 100%;
   }
 }
-.content div.introduction {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-.content div.introduction div.pic {
-  width: 45%;
+.content div.pic,
+.content div.words {
+  width: 49%;
   display: flex;
   justify-content: center;
   align-content: center;
+  font-size: 1.6rem;
 }
-.content div.introduction .words {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  width: 48%;
-  margin-right: 2%;
+@media (max-width: 800px) {
+  .content div.pic,
+  .content div.words {
+    width: 100%;
+  }
 }
 .content h2 {
   border: 1px solid #050505;
@@ -203,6 +254,7 @@ header section.nav a {
   display: flex;
   justify-content: center;
   background: #a78686;
+  font-size: 2rem;
 }
 .content .introtitle,
 .content .commentary {
@@ -211,16 +263,13 @@ header section.nav a {
   align-self: center;
   justify-self: center;
 }
+.content .commentary {
+  flex-direction: column;
+}
 .content .box {
   display: flex;
   flex-direction: column;
   width: 50%;
-}
-@media (max-width: 900px) {
-  .content .box {
-    display: flex;
-    flex-wrap: wrap;
-  }
 }
 .content .box h2 {
   font-style: 'lora', serif;
@@ -231,11 +280,49 @@ header section.nav a {
   justify-content: center;
   background: #a78686;
 }
-ul,
-ol {
+.content ul,
+.content ol {
   margin: 0 15%;
+}
+.content ul li,
+.content ol li {
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 600px) {
+  .content ul li,
+  .content ol li {
+    border-bottom: 1px solid grey;
+  }
+}
+.footer {
+  width: 100%;
+  background: black;
+  color: white;
+  box-sizing: border-box;
+  margin-left: 9px;
+}
+@media (max-width: 800px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    width: 100%;
+  }
+}
+.footer h3 {
+  font-size: 1.1rem;
+}
+.footer input {
+  width: 45%;
+  margin: 3px;
 }
 .licenseLink {
   box-sizing: border-box;
   margin: 2% 0% 2% 2%;
+  align-self: center;
+}
+.licenseLink a {
+  text-decoration: none;
+  color: bisque;
 }

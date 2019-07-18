@@ -69,16 +69,32 @@ html, body {
 }
 
 header {
+	.bordered();
+	position: fixed;
+	height:8%vh;
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
 	align-content: center;
 	box-sizing: border-box;
 	background: grey;
-	section.nav  {
-		width:45%;
-		display: flex;
+
+	@media (max-width:800px){
+		justify-content: space-evenly;
+		
+	}
+	h1{
+		width: 20%;
+		align-self: center;
 		justify-content: center;
+	}
+	section.nav  {
+		width:60%;
+		display: flex;
+		justify-content: space-evenly;
+		font-size: 1.5rem;
+		padding: 5px;
+		
 		
 		a {
 			.bordered();
@@ -88,55 +104,87 @@ header {
 			width:90px;
 			font-style: @secondFont;
 			Color: rgb(46, 43, 43);
+			margin: 0px 2px 0 2px;
 			background: rgb(167, 134, 134);
+
+			
 			 
 		}
 		
 	}
 
 }
+ .nav a:hover {
+	background:black;
+	color: silver;
+}
 
+
+.bottomsection {
+	@media (max-width:800px){
+		display:flex;
+		flex-direction: column;
+		align-content: flex-start;
+		
+	}
+	width: 100%;
+	display:flex;
+	
+	
+		
+	div.box.skills, div.box.workHistory {
+		@media (max-width:800px){
+			width:100%;	}
+
+		.bordered();
+		width: 48%;
+		font-size: 1.8rem;
+			
+	}
+}
+
+ img {
+	width:100%;
+}
 
 
 .content {
+	font-size: 1.2rem;
 	background: lightgray;
 	display: flex;
 	flex-wrap: wrap;
 	
-	@media only screen and (max-width:767px){
-			display:flex;
-			flex-wrap: wrap;
-		}
+	
 
 	div.introduction {
+
+		@media (max-width:800px){
+			display:block;
+			flex-direction: column;
+			width:100%;
+		}
+		.bordered();
 		display:flex;
-		justify-content: space-between;
+		justify-content: space-around;
 		flex-wrap: wrap;
-		margin-top: 5px;
-		margin-bottom: 5px;
+		margin: 5% 0  1% 0;
+			
+	}
 
 		
 
-		div.pic {
-			width: 45%;
+		div.pic, div.words {
+			@media (max-width:800px){
+				width:100%;
+			}
+
+			width: 49%;
 			display: flex;
 			justify-content: center;
 			align-content: center;
-			
-			
-		}
-		.words {
-			display:flex;
-			flex-direction: column;
-			justify-content: center;
-			align-content: center;
-			width: 48%;
-			margin-right: 2%;			
-
-			
+			font-size: 1.6rem;		
 		}
 		
-	}
 
 	h2 {
 		.bordered();
@@ -144,6 +192,7 @@ header {
 	display: flex;
 	justify-content: center;
 	background: rgb(167, 134, 134);
+	font-size: 2rem;
 	}
 
 	.introtitle, .commentary {
@@ -151,17 +200,16 @@ header {
 		display: flex;
 		align-self: center;
 		justify-self: center;
+		
+	}
+	.commentary {
+		flex-direction: column;
 	}
 	.box {
 		display:flex;
 		flex-direction: column;
 		width: 50%;
 		
-		
-		@media (max-width: 900px){
-			display: flex;
-			flex-wrap: wrap;
-		}
 
 		h2 {
 			font-style: @secondFont;
@@ -172,17 +220,52 @@ header {
 			background: rgb(167, 134, 134);
 		}
 	}
-}
+
 
 ul, ol {
 	margin: 0 15%;
+
+	li {
+		display:flex;
+		justify-content: center;
+		@media (max-width:600px){
+		border-bottom: 1px solid grey;}
+	}
+}
+}
+
+.footer {
+	width:100%;
+	background: black;
+		color: white;
+
+	@media (max-width:800px){
+		display:flex;
+		flex-direction: column;
+		align-content: flex-start;
+		width:100%;}
+		
+
+		h3 {
+			font-size: 1.1rem;
+		}
+	
+	box-sizing: border-box;
+	margin-left: 9px;
+	
+	input {
+		width:45%;
+		margin: 3px;
+	}
 }
 .licenseLink {
+	
 	box-sizing: border-box;
 	margin: 2% 0% 2% 2%;
+	align-self: center;
+
+	a {
+		text-decoration: none;
+		color: bisque;
+	}
 }
-
-	
-
-
-
